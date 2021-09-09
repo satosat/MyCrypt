@@ -1,0 +1,253 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+nav{
+	position: fixed;
+    top: 0;
+    left: 0;
+	/*background: linear-gradient(to right, #DA22FF 0%, #DA22FF  51%, #DA22FF  100%);*/
+	background: #8468D9;
+	transition: top 300ms;
+}
+
+.nav-link{
+	font-weight: 500;
+	color: #fff;
+}
+
+.navbar-nav li a{
+	color: #fff;
+}
+
+body{
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
+.collapse ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.collapse ul li:hover::after{
+    width: 100%;
+}
+
+.navbar-brand{
+	font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+	color: #fff;
+}
+
+.wrapper{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.login-content{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	margin-top: 10vh;
+}
+
+form{
+	width: 360px;
+}
+
+.login-content img{
+    height: 100px;
+	border-radius: 25%;
+}
+
+.login-content h2{
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+
+.login-content .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div.one{
+	margin-top: 0;
+}
+
+.i{
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i i{
+	transition: .3s;
+}
+
+.input-div > div{
+    position: relative;
+	height: 45px;
+}
+
+.input-div > div > h5{
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #999;
+	font-size: 18px;
+	transition: .3s;
+}
+
+.input-div:before, .input-div:after{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	width: 0%;
+	height: 2px;
+	background-color: #DA22FF;
+	transition: .4s;
+}
+
+.input-div:before{
+	right: 50%;
+}
+
+.input-div:after{
+	left: 50%;
+}
+
+.input-div.focus:before, .input-div.focus:after{
+	width: 50%;
+}
+
+.input-div.focus > div > h5{
+	top: -5px;
+	font-size: 15px;
+}
+
+.input-div.focus > .i > i{
+	color: #DA22FF;
+}
+
+.input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: #555;
+	font-family: 'poppins', sans-serif;
+}
+
+.input-div.pass{
+	margin-bottom: 4px;
+}
+
+.nav-item a{
+	display: block;
+	/*text-align: right;*/
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+}
+
+a:hover{
+	color: #DA22FF;
+}
+
+.button{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+	/*background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);*/
+	background: rgb(196,144,228);
+	background: linear-gradient(90deg, rgba(196,144,228,1) 0%, rgba(246,198,234,1) 79%, rgba(249,249,249,1) 100%);
+	background-size: 200%;
+	font-size: 1.2rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin: 1rem 0;
+	cursor: pointer;
+	transition: .5s;
+}
+.button:hover{
+	background-position: right;
+}
+
+@media screen and (max-width: 1000px){
+	form{
+		width: 290px;
+	}
+
+	.login-content h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+	}
+}
+
+@media screen and (max-width: 900px){
+	.login-content{
+		justify-content: center;
+	}
+
+	main {
+		font-size: 13.5px;
+	}
+}
+
+/*Asset hover at homepage*/
+.asset:hover {
+    text-decoration: underline;
+}
+
+.asset-row:hover {
+	background-color: #B980F0;
+	cursor: grab;
+}
+
+/*SCROLLBAR*/
+::-webkit-scrollbar-track
+{
+	/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+	/*border-radius: 10px;*/
+	background-color: #021841;
+}
+::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb
+{
+	/*border-radius: 10px;*/
+	/*-webkit-box-shadow: #B980F0;*/
+	background-color: #8468D9;
+}

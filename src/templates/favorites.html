@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Favorites
+{% endblock %}
+
+{% block main %}
+
+    <script src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"></script>
+
+    {% for asset in assets %}
+        <div class="row">
+            <coingecko-coin-ticker-widget  coin-id="{{ asset.CGname }}" currency="usd" locale="en"></coingecko-coin-ticker-widget>
+        </div>
+    {% endfor %}
+
+{% endblock %}

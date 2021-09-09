@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Deposit
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+            background-color: #021841;
+        }
+        main {
+            color: white;
+        }
+    </style>
+
+    <h3>
+        Balance:
+        <small class="text-muted">{{ balance }}</small>
+    </h3>
+    <form method="POST">
+        <div class="mb-3">
+            <label for="amount" class="form-label">Deposit Amount</label>
+            <input type="number" class="form-control" id="amount" name="amount" placeholder="$">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Deposit">
+    </form>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+
+    <link rel="stylesheet" href="../static/welcomeAnimation.css">
+    <style>
+        body {
+            background-color: #021841;
+            overflow-x: hidden;
+        }
+        input {
+            color: white;
+        }
+    </style>
+
+    <script>
+        // Manually toggle animation by adding styles to the SVGs and hiding every other tags, called when submit button is clicked
+        function addClass() {
+            document.getElementById('wrapper').style.display = 'none'
+            document.querySelector('body').style.overflow = 'hidden'
+            document.querySelector('nav').style.visibility = 'hidden'
+
+            let v = document.getElementById('loading-screen')
+            v.style.display = 'flex'
+
+            let r = document.getElementById('rect')
+            r.style.animation = 'rectAnimate 3s'
+
+            let t = document.getElementById('text')
+            t.style.animation = 'textAnimate 3s'
+
+            setTimeout(() => {
+                document.getElementById('form').submit()
+            }, 3100)
+        }
+
+    </script>
+
+    <div class="svg-background welcome-div" id="loading-screen" style="display: none">
+        <svg viewBox="0 0 1350 600" class="welcome-div">
+            <rect x="25%" y="18%" width="700" height="300" fill="transparent" class="welcome-div" id="rect"></rect>
+            <text x="50%" y="50%" fill="transparent" text-anchor="middle" class="welcome-div" id="text">
+                    MyCrypt
+            </text>
+        </svg>
+    </div>
+
+    <div class="wrapper" id="wrapper">
+        <div class="login-content">
+            <form method="POST" id="form">
+                <h2 style="color: white;">Log In</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input autocomplete="off" type="text" class="input" name="username" style="color: white">
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input" name="password" style="color: white">
+                    </div>
+                </div>
+                <input class="button" onclick="addClass()" value="Submit" style="text-align: center">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

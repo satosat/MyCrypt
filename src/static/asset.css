@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+p{
+    font-weight: 300;
+    margin: 0;
+    color: #111;
+}
+
+body{
+    min-height: 1000px;
+    overflow-x: hidden;
+}
+
+.menu{
+    background-color: #8468D9;
+    margin-top: 80px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.menu h2{
+    font-size: 4em;
+    padding-left: 100px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 18px;
+    background: transparent;
+    background-color: #8468D9;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    flex-basis: 48%;
+    min-width: 500px;
+
+    transition: 0.25s ease;
+    /* margin-top: 50px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.card-text{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    padding-left: 30px;
+    flex-grow: 1;
+    width: 100%;
+    text-align: left;
+}
+
+.card:hover{
+    transform: scale(1.0);
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+
+.just-text{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.total-usd{
+    display: flex;
+    width: 100%;
+}
+
+.sub-title{
+    padding-left: 30px;
+    min-width: 200px;
+    text-align: left;
+    flex-basis: 40%;
+    margin-bottom: 20px;
+}
+
+.sub-title h4 {
+    margin-bottom: 0;
+}
+
+.input-group{
+    width: 100%;
+    flex: 1;
+    margin-left: auto;
+    flex-basis: 60%;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.transact-button{
+    width: 100%;
+}
+
+#btn-buy{
+    width: 90%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    opacity: 75%;
+    transition: 0.2s ease;
+}
+
+#btn-sell{
+    width: 90%;
+    background-color: rgba(177, 0, 0, 0.721);
+    border: none;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    font-size: 0.9em;
+    opacity: 75%;
+    transition: 0.2s ease;
+}
+
+#btn-sell:hover, #btn-buy:hover{
+    opacity: 100%;
+}
+
+.text{
+    padding-left: 10px;
+}
+
+h4{
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+label{
+    margin-left: 0px;
+    width: 100%;
+}
+
+#usd-amount, #coin-amount{
+    min-width: 50%;
+    max-width: 80%;
+    cursor: text;
+}
+
+.transact-input {
+    border-radius: 5px;
+    border-color: rgba(0,0,0,0)
+}

@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+            background-color: #021841;
+            overflow-x: hidden;
+        }
+    </style>
+
+    <div class="wrapper">
+        <div class="login-content">
+            <form action="/register" method="POST">
+                <h2 class="title" style="color: white">Registration</h2>
+                <!-- USERNAME -->
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Username</h5>
+                        <input autocomplete="off" type="text" class="input" name="username" style="color: white">
+                    </div>
+                </div>
+                <!-- EMAIL -->
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-at"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Email</h5>
+                        <input autocomplete="off" type="email" class="input" name="email" style="color: white">
+                    </div>
+                 </div>
+                <!-- PASSWORD -->
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Password</h5>
+                        <input type="password" class="input" name="password" style="color: white">
+                    </div>
+                </div>
+                <!-- CONFIRM PASSWORD -->
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Confirm Password</h5>
+                        <input type="password" class="input" name="confirm_password" style="color: white">
+                    </div>
+                </div>
+                <!-- BUTTON -->
+                <input type="submit" class="button">
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

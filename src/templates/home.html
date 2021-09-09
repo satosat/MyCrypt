@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <h3>
+        Balance:
+        <small class="text-muted">{{ balance }}</small>
+    </h3>
+
+    <div class="row" style="padding: 20px; border-bottom: 1px solid lightgray">
+        <div class="col-2" align="center">
+            #
+        </div>
+        <div class="col-6">
+            <h5>Cryptocurrency</h5>
+        </div>
+        <div class="col-2">
+            24H%
+        </div>
+        <div class="col-2">
+            Price
+        </div>
+    </div>
+
+    {% for asset in assets %}
+
+        <div class="row asset-row" style="padding: 20px; border-bottom: 1px solid lightgray; align-items: center">
+            <div class="col-2" align="center">
+                {{ asset.id }}
+            </div>
+            <div class="col-6 asset" style="justify-content: center;align-items: center">
+                <img src="../static/logos/{{ asset.symbol }}.png" style="width: 40px; height: 40px; margin-right: 20px">
+                <a href="/asset?name={{ asset.symbol }}" style="text-decoration: none; color: white">{{ asset.name }}</a>
+            </div>
+            {% if asset.change24H > 0 %}
+                <div class="col-2" style=" color: #67F097">
+                    +{{ asset.change24H }}%
+                </div>
+            {% else %}
+                <div class="col-2" style=" color: #EB3B52">
+                    {{ asset.change24H }}%
+                </div>
+            {% endif %}
+            <div class="col-2">
+                {{ asset.price }}
+            </div>
+        </div>
+
+    {% endfor %}
+
+{% endblock %}
