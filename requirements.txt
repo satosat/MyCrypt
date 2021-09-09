@@ -1,0 +1,4 @@
+cs50>=7.0.2
+Flask>=2.0.1
+Werkzeug>=2.0.1
+pycoingecko>=2.2.0
